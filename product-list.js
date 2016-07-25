@@ -130,15 +130,10 @@ function render (list) {
 }
 
 function renderList (list) {
-  containerElement.innerHTML = null;
-  containerElement.className = "";
+  $("#product-list").html(null);
+  $("#product-list").attr("class", "");
   for (var i=0; i<list.length; i++) {
-    var item = document.createElement("li");
-    var a = document.createElement("a");
-    a.href = "product.html?id=" + list[i].id;
-    a.innerText = list[i].name;
-    item.appendChild(a);
-    containerElement.appendChild(item);
+    $("#product-list").append("<li><a href='product.html?id=" + items[i].id + "'>" + items[i].name + "</a></li>");
   }
 }
 
