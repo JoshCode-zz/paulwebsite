@@ -1,3 +1,9 @@
+$(document).ready(function(){
+  $('.image-popup').magnificPopup({
+		type: 'image'
+	});
+});
+
 var id = getQueryString("id") - 1;
 
 var productName = document.getElementById("product-name");
